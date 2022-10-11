@@ -54,12 +54,7 @@ function initHelloButtons(){
     const locale = getLocale(btn)
     const customLabel = btn.getAttribute("data-label")
     if(customLabel) {
-      //Position "ō" at right for RTL languages
-      if(locale.startsWith("ar")) {
-        btn.innerHTML = `${customLabel}&nbsp;&nbsp;&nbsp;ō`
-      } else {
-        btn.innerHTML = `ō&nbsp;&nbsp;&nbsp;${customLabel}`
-      }
+      btn.innerHTML = customLabel
     } else {
       btn.innerHTML = localeKeys[locale]["hello_btn"] || localeKeys.en["hello_btn"]
     }
@@ -109,16 +104,18 @@ function initHelloButtons(){
     about.innerHTML = localeKeys[locale]["hello_about"] || localeKeys.en["hello_about"]
     helloAboutBubbleRef.innerHTML = localeKeys[locale]["hello_about_bubble"] || localeKeys.en["hello_about_bubble"]
     updateBubblePosition(helloAboutBubbleRef)
-    // const left = helloAboutBubbleRef.getBoundingClientRect().left
-    // const right = helloAboutBubbleRef.getBoundingClientRect().right
-    // if(left <=0 || right >= window.innerWidth){
-    //   helloAboutBubbleRef.classList.add("hello-about-bubble-width-full")
-    // }
+    // if(!containerCreated){
+    //   const left = helloAboutBubbleRef.getBoundingClientRect().left
+    //   const right = helloAboutBubbleRef.getBoundingClientRect().right
+    //   if(left <=0 || right >= window.innerWidth){
+    //     helloAboutBubbleRef.classList.add("hello-about-bubble-width-full")
+    //   }
+    // } 
   })
   DOMObserver && DOMObserver.observe(document.body, DOMObserverConfig)
 }
 
 function updateBubblePosition(node){
   const abouBtnRefHeight = node.previousElementSibling.getBoundingClientRect().height
-  node.style.top = (abouBtnRefHeight + 24 /* 12+12 margin */) + "px"
+  node.style.top = (abouBtnRefHeight + 12 + 14 /* 12px bottom margin + 14px arrow height */) + "px"
 }
