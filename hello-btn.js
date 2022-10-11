@@ -108,13 +108,11 @@ function initHelloButtons(){
     const helloAboutBubbleRef = about.nextElementSibling
     about.innerHTML = localeKeys[locale]["hello_about"] || localeKeys.en["hello_about"]
     helloAboutBubbleRef.innerHTML = localeKeys[locale]["hello_about_bubble"] || localeKeys.en["hello_about_bubble"]
-    if(!containerCreated){
-      updateBubblePosition(helloAboutBubbleRef)
-      const left = helloAboutBubbleRef.getBoundingClientRect().left
-      const right = helloAboutBubbleRef.getBoundingClientRect().right
-      if(left <=0 || right >= window.innerWidth){
-        helloAboutBubbleRef.classList.add("hello-about-bubble-width-full")
-      }
+    updateBubblePosition(helloAboutBubbleRef)
+    const left = helloAboutBubbleRef.getBoundingClientRect().left
+    const right = helloAboutBubbleRef.getBoundingClientRect().right
+    if(left <=0 || right >= window.innerWidth){
+      helloAboutBubbleRef.classList.add("hello-about-bubble-width-full")
     }
   })
   DOMObserver && DOMObserver.observe(document.body, DOMObserverConfig)

@@ -627,7 +627,7 @@
 /* LANGUAGE SPECIFIC BUBBLE WIDTH */
 .hello-about-bubble{
 	width: calc(100vW - 20px) !important;
-	max-width: 410px;
+	max-width: 417px;
 }
 .hello-container[lang="hi"] .hello-about-bubble,
 .hello-about[lang="hi"] + .hello-about-bubble{
