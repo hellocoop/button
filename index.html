@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellō Button Test</title>
+    <!-- https://cdn.hello.coop/css/hello-btn.css -->
+    <link rel="stylesheet" href="hello-btn.css"/>
+    <!--
+        type="module" should not be used when
+        using the CDN version: https://cdn.hello.coop/js/hello-btn.js
+    -->
+    <script src="hello-btn.js" type="module"></script>
+    <style>
+        html, body {
+            min-height: 100%;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="hello-container">
+        <button class="hello-btn"></button>
+        <button class="hello-about" style="color: #303030;"></button>
+    </div>
+
+    <div class="hello-container">
+        <button class="hello-btn" data-label="Update with Hellō"></button>
+        <button class="hello-about" style="color: #303030;"></button>
+    </div>
+</body>
+</html>
