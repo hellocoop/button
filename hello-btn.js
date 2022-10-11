@@ -110,6 +110,11 @@ function initHelloButtons(){
     helloAboutBubbleRef.innerHTML = localeKeys[locale]["hello_about_bubble"] || localeKeys.en["hello_about_bubble"]
     if(!containerCreated){
       updateBubblePosition(helloAboutBubbleRef)
+      const left = helloAboutBubbleRef.getBoundingClientRect().left
+      const right = helloAboutBubbleRef.getBoundingClientRect().right
+      if(left <=0 || right >= window.innerWidth){
+        helloAboutBubbleRef.classList.add("hello-about-bubble-width-full")
+      }
     }
   })
   DOMObserver && DOMObserver.observe(document.body, DOMObserverConfig)
@@ -118,9 +123,4 @@ function initHelloButtons(){
 function updateBubblePosition(node){
   const abouBtnRefHeight = node.previousElementSibling.getBoundingClientRect().height
   node.style.top = (abouBtnRefHeight + 24 /* 12+12 margin */) + "px"
-  const left = node.getBoundingClientRect().left
-  const right = node.getBoundingClientRect().right
-  if(left <=0 || right >= window.innerWidth){
-    node.classList.add("hello-about-bubble-width-full")
-  }
 }
