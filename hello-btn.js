@@ -27,7 +27,7 @@ window.addEventListener('load', ()=> {
   DOMObserver = new MutationObserver(initHelloButtons)
   DOMObserver.observe(document.body, DOMObserverConfig)
   window.addEventListener('resize', () => {
-    document.querySelectorAll('.hello-bubble').forEach(updateBubblePosition)
+    document.querySelectorAll('.hello-about-bubble').forEach(updateBubblePosition)
   })
 })
 function getLocale(node){
@@ -76,7 +76,6 @@ function initHelloButtons(){
       about.parentNode.replaceChild(aboutContainer, about)
       aboutContainer.appendChild(about)
       aboutContainer.appendChild(textBubbleEle)
-      updateBubblePosition(textBubbleEle)
     }
     const listenerAttached = about.getAttribute("data-listener-attached")
     if(!listenerAttached){
@@ -109,16 +108,19 @@ function initHelloButtons(){
     const helloAboutBubbleRef = about.nextElementSibling
     about.innerHTML = localeKeys[locale]["hello_about"] || localeKeys.en["hello_about"]
     helloAboutBubbleRef.innerHTML = localeKeys[locale]["hello_about_bubble"] || localeKeys.en["hello_about_bubble"]
-    updateBubblePosition(helloAboutBubbleRef)
+    if(!containerCreated){
+      updateBubblePosition(helloAboutBubbleRef)
+    }
   })
   DOMObserver && DOMObserver.observe(document.body, DOMObserverConfig)
 }
+
 function updateBubblePosition(node){
+  const abouBtnRefHeight = node.previousElementSibling.getBoundingClientRect().height
+  node.style.top = (abouBtnRefHeight + 24 /* 12+12 margin */) + "px"
   const left = node.getBoundingClientRect().left
   const right = node.getBoundingClientRect().right
   if(left <=0 || right >= window.innerWidth){
     node.classList.add("hello-about-bubble-width-full")
-  } else {
-    node.classList.remove("hello-about-bubble-width-full")
   }
 }
