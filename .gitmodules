@@ -1,0 +1,3 @@
+[submodule "wallet-i18n"]
+	path = wallet-i18n
+	url = https://github.com/hellocoop/wallet-i18n.git
