@@ -2,9 +2,8 @@
   "name": "button",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "esbuild hello-btn.css --minify --outfile=../S3/css/hello-btn.css && esbuild hello-btn.js --bundle --minify --outfile=../S3/js/hello-btn.js"
   },
   "repository": {
     "type": "git",
