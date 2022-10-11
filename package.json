@@ -3,8 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "vite",
-    "build": "esbuild hello-btn.css --minify --outfile=../S3/css/hello-btn.css && esbuild hello-btn.js --bundle --minify --outfile=../S3/js/hello-btn.js"
+    "dev": "vite"
   },
   "repository": {
     "type": "git",
@@ -18,7 +17,6 @@
   },
   "homepage": "https://github.com/hellocoop/button#readme",
   "devDependencies": {
-    "esbuild": "^0.15.10",
     "vite": "^3.1.7"
   }
 }
