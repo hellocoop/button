@@ -19,6 +19,17 @@ const DOMObserverConfig = {
   attributes: true,
   attributeFilter: ["style", "lang", "class"]
 }
+window.addEventListener('load', ()=> {
+  initHelloButtons()
+  //Listen for language change
+  window.addEventListener('languagechange', initHelloButtons)
+  //Listen for DOM changes (SPA)
+  DOMObserver = new MutationObserver(initHelloButtons)
+  DOMObserver.observe(document.body, DOMObserverConfig)
+  window.addEventListener('resize', () => {
+    document.querySelectorAll('.hello-bubble').forEach(updateBubblePosition)
+  })
+})
 function getLocale(node){
   const navigatorLang = window.navigator.language
   const supportedLocales = Object.keys(localeKeys)
@@ -41,7 +52,17 @@ function initHelloButtons(){
   DOMObserver && DOMObserver.disconnect()
   document.querySelectorAll('.hello-btn').forEach(btn => {
     const locale = getLocale(btn)
-    btn.innerHTML = localeKeys[locale]["hello_btn"] || localeKeys.en["hello_btn"]
+    const customLabel = btn.getAttribute("data-label")
+    if(customLabel) {
+      //Position "ō" at right for RTL languages
+      if(locale.startsWith("ar")) {
+        btn.innerHTML = `${customLabel}&nbsp;&nbsp;&nbsp;ō`
+      } else {
+        btn.innerHTML = `ō&nbsp;&nbsp;&nbsp;${customLabel}`
+      }
+    } else {
+      btn.innerHTML = localeKeys[locale]["hello_btn"] || localeKeys.en["hello_btn"]
+    }
   })
   document.querySelectorAll('.hello-about').forEach(about => {
     const locale = getLocale(about)
@@ -101,14 +122,3 @@ function updateBubblePosition(node){
     node.classList.remove("hello-about-bubble-width-full")
   }
 }
-window.addEventListener('load', ()=> {
-  initHelloButtons()
-  //Listen for language change
-  window.addEventListener('languagechange', initHelloButtons)
-  //Listen for DOM changes (SPA)
-  DOMObserver = new MutationObserver(initHelloButtons)
-  DOMObserver.observe(document.body, DOMObserverConfig)
-  window.addEventListener('resize', () => {
-    document.querySelectorAll('.hello-bubble').forEach(updateBubblePosition)
-  })
-})
