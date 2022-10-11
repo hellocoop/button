@@ -1,8 +1,6 @@
 # hello.dev
 
-This repo contains the source code for the Hellō Button CSS and JS at:
-https://cdn.hello.coop/css/hello-css.js  
-https://cdn.hello.coop/js/hello-btn.js  
+This repo contains the source code for the Hellō Button CSS and JS at https://cdn.hello.coop/css/hello-css.js and https://cdn.hello.coop/js/hello-btn.js
 
 ## Getting started
 
@@ -14,13 +12,13 @@ https://cdn.hello.coop/js/hello-btn.js
 
 ### Installation
 
-1. `git clone https://github.com/hellocoop/button.git --recursive` (--recursive because the repo contains a submodile)
+1. `git clone https://github.com/hellocoop/button.git --recursive`
 1. `cd button` to go into the project root
 1. `npm i` to install the npm dependencies
 
 ### Running locally
 
-1. `npm run dev` to start the hot-reloading development server (powered by [Vite](https://vitejs.dev/))
+`npm run dev` to start the hot-reloading development server (powered by [Vite](https://vitejs.dev/))
 
 
 ## License
