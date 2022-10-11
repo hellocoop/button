@@ -104,13 +104,13 @@ function initHelloButtons(){
     about.innerHTML = localeKeys[locale]["hello_about"] || localeKeys.en["hello_about"]
     helloAboutBubbleRef.innerHTML = localeKeys[locale]["hello_about_bubble"] || localeKeys.en["hello_about_bubble"]
     updateBubblePosition(helloAboutBubbleRef)
-    // if(!containerCreated){
-    //   const left = helloAboutBubbleRef.getBoundingClientRect().left
-    //   const right = helloAboutBubbleRef.getBoundingClientRect().right
-    //   if(left <=0 || right >= window.innerWidth){
-    //     helloAboutBubbleRef.classList.add("hello-about-bubble-width-full")
-    //   }
-    // } 
+    if(!containerCreated){
+      const left = helloAboutBubbleRef.getBoundingClientRect().left
+      const right = helloAboutBubbleRef.getBoundingClientRect().right
+      if(left <=0 || right >= window.innerWidth){
+        helloAboutBubbleRef.classList.add("hello-about-bubble-width-full")
+      }
+    } 
   })
   DOMObserver && DOMObserver.observe(document.body, DOMObserverConfig)
 }
