@@ -8,8 +8,7 @@ This repo contains the source code for the Hellō Button CSS and JS at https://c
 
 1. Git
 1. A fork of the repo (for any contributions)
-1. Run `git clone https://github.com/hellocoop/button.git --recursive` to get a copy of the repo on your local machine. 
-(`--recursive` flag must be passed because the repo contains [hellocoop/wallet-i18n](https://github.com/hellocoop/wallet-i18n) as a git submodule)
+1. Run `git clone https://github.com/hellocoop/button.git --recursive` to get a copy of the repo on your local machine.  (`--recursive` flag must be passed because the repo contains [hellocoop/wallet-i18n](https://github.com/hellocoop/wallet-i18n) as a git submodule)
 
 ### Installation
 
