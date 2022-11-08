@@ -124,16 +124,8 @@
 
 /* BASE CLASSES */
 
-@media (prefers-color-scheme: dark) {
-    .hello-about-container {
-        color: #d4d4d4;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-    .hello-about-container {
-        color: #303030;
-    }
+.hello-about-container {
+	color: #303030;
 }
 
 /* LIGHT */
