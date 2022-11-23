@@ -79,6 +79,7 @@
 .hello-btn-black-and-invert,
 .hello-btn-black-and-static,
 .hello-btn-white-and-static {
+	font-family: sans-serif;
 	position: relative;
 	padding: 0.8rem 1.6rem;
 	border-radius: 0.4rem;
