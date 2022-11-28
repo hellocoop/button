@@ -7,7 +7,6 @@ function App() {
   return (
     <HelloButton
       onClick={() => alert(123)}
-      tooltip={false}
     />
   )
 }
