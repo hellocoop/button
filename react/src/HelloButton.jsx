@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useRef} from "react"
 import { useEffect } from "react"
 import "../../hello-btn.css"
 import {hello_container as en} from "../../wallet-i18n/locale/en.json"
@@ -35,11 +35,8 @@ const HelloButton = ({
     const buttonText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_btn : en["hello_btn"]
     const aboutButtonText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_about : en["hello_about"]
     const aboutBubbleText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_about_bubble : en["hello_about_bubble"]
+    
     useEffect(() => {
-        document.addEventListener("click", (e) => {
-            console.log(e)
-        })
-
         if(!lang) {
             _setLang(window.navigator.language)
         }
@@ -47,6 +44,27 @@ const HelloButton = ({
             _setLang(window.navigator.language)
         })
     }, [])
+    
+    const useOutsideClick = () => {
+        const ref = useRef()
+        React.useEffect(() => {
+          const handleClick = (event) => {
+            if (
+                ref.current && !ref.current.contains(event.target) &&
+                !document.querySelector(".hello-about").contains(event.target)
+            ) {
+                setShowTooltip(false)
+            }
+          }
+          document.addEventListener('click', handleClick, true)
+          return () => {
+            document.removeEventListener('click', handleClick, true)
+          }
+        }, [ref])
+        return ref
+    }
+
+    const ref = useOutsideClick()
     return (
         <div className="hello-container">
             <button
@@ -67,7 +85,7 @@ const HelloButton = ({
                     </button>
                     {
                         showTooltip && (
-                            <span className="hello-about-bubble" style={{visibility: "visible", top: "46px"}}>
+                            <span ref={ref} className="hello-about-bubble" style={{visibility: "visible", top: "46px"}}>
                                 {aboutBubbleText}
                             </span>
                         )
