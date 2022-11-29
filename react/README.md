@@ -106,14 +106,14 @@ You can also add/overwrite targetting classes per the markup above.
 
 #### lang
 
-| Value        | Language | Output                                                                 |
-| ------------ | -------- | ---------------------------------------------------------------------- |
-| en (Default) | English  | <img src="../screenshots/en.png" alt="Default" style="width: 400px;"/> |
-| hi           | Hindi    | <img src="../screenshots/hi.png" alt="hi" style="width: 400px;"/>      |
-| ar           | Arabic   | <img src="../screenshots/ar.png" alt="ar" style="width: 400px;"/>      |
-| de           | German   | <img src="../screenshots/de.png" alt="de" style="width: 400px;"/>      |
-| fr           | Frarch   | <img src="../screenshots/fr.png" alt="fr" style="width: 400px;"/>      |
-| es           | Spanish  | <img src="../screenshots/es.png" alt="es" style="width: 400px;"/>      |
+| Value            | Language | Output                                                                 |
+| ---------------- | -------- | ---------------------------------------------------------------------- |
+| en<br/>(Default) | English  | <img src="../screenshots/en.png" alt="Default" style="width: 400px;"/> |
+| hi               | Hindi    | <img src="../screenshots/hi.png" alt="hi" style="width: 400px;"/>      |
+| ar               | Arabic   | <img src="../screenshots/ar.png" alt="ar" style="width: 400px;"/>      |
+| de               | German   | <img src="../screenshots/de.png" alt="de" style="width: 400px;"/>      |
+| fr               | Frarch   | <img src="../screenshots/fr.png" alt="fr" style="width: 400px;"/>      |
+| es               | Spanish  | <img src="../screenshots/es.png" alt="es" style="width: 400px;"/>      |
 
 Don't see your locale? We encourage you to create a translation for your locale per
 [hellocoop/wallet-i18n](https://github.com/hellocoop/wallet-i18n) and submit a pull request for review.
