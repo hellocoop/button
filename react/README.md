@@ -61,7 +61,7 @@ The values suffixed with `invert` and `static` are theme aware.
 ### `hover`
 
 - hello-btn-hover-glow
-- hello-btn-hover-glare
+- hello-btn-hover-flare
 - hello-btn-hover-none
 
 ### Advanced Styling
