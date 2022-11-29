@@ -38,7 +38,7 @@ function Foo() {
 | lang         | String [Enum](#lang)         | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                                |
 | customLabel  | String                       | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default Hellō Button text <br/><img src="../screenshots/custom-label.png" alt="custom label" style="width: 200px;"/> |
 
-### Styling
+## Styling
 
 `variant` and `hoverVariant` props controls the styling of the Hellō Button.
 
@@ -46,7 +46,7 @@ Play with the different button styles at [hello.dev](https://www.hello.dev/docum
 
 <img src="../screenshots/demo.png" alt="button demo" style="width: 500px;" />
 
-#### `variant`
+### `variant`
 
 The values suffixed with `invert` and `static` are theme aware.
 
@@ -62,7 +62,7 @@ The values suffixed with `invert` and `static` are theme aware.
 | hello-btn-black-and-static | <img src="../screenshots/hello-btn-black-and-static.png" alt="hello-btn-black-and-static" style="width: 200px;"/> |
 | hello-btn-white-and-static | <img src="../screenshots/hello-btn-white-and-static.png" alt="hello-btn-white-and-static" style="width: 200px;"/> |
 
-#### `hoverVariant`
+### `hoverVariant`
 
 | Value                 | Example Output (Default Variant + Light Mode)                                                           |
 | --------------------- | ------------------------------------------------------------------------------------------------------- |
@@ -71,7 +71,7 @@ The values suffixed with `invert` and `static` are theme aware.
 | hello-btn-hover-flare | <img src="../screenshots/hello-btn-hover-flare.png" alt="hello-btn-hover-flare" style="width: 200px;"/> |
 | hello-btn-hover-none  | <img src="../screenshots/default.png" alt="hello-btn-hover-none" style="width: 200px;"/>                |
 
-#### Advanced Styling
+### Advanced Styling
 
 Internally `<HelloButton/>` renders the markup
 
@@ -114,9 +114,9 @@ You can also add/overwrite targetting classes per the markup above.
 }
 ```
 
-### Locales
+## Locales
 
-#### lang
+### lang
 
 | Value            | Language | Output                                                                 |
 | ---------------- | -------- | ---------------------------------------------------------------------- |
