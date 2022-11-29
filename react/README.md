@@ -122,6 +122,6 @@ You can also add/overwrite targetting classes per the markup above.
 | fr           | Frarch   |
 | es           | Spanish  |
 
-Don't see your locale?
+Don't see your locale?<br/>
 We encourage you to create a translation for your locale per
 [hellocoop/wallet-i18n](https://github.com/hellocoop/wallet-i18n) and submit a pull request for review.
