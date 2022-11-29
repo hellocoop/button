@@ -116,4 +116,4 @@ You can also add/overwrite targetting classes per the markup above.
 | es           | Spanish  | <img src="../screenshots/es.png" alt="es" style="width: 400px;"/>      |
 
 Don't see your locale? We encourage you to create a translation for your locale per
-hellocoop/wallet-i18n and submit a pull request for review.
+[hellocoop/wallet-i18n](https://github.com/hellocoop/wallet-i18n) and submit a pull request for review.
