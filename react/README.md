@@ -1,4 +1,4 @@
-# Hellō Button Component for React
+# <HellōButton/> for React
 
 ## Usage
 
@@ -14,16 +14,16 @@ function Foo() {
 
 ## Props
 
-| Name         | Type            | Default                                  | Description/Output                                                                                                          |
-| ------------ | --------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| onClick      | function        | `() => {}` (no-op)                       | Called on click of Hellō button                                                                                             |
-| loading      | boolean         | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/> (best used in conjunction with `disabled` prop) |
-| disabled     | boolean         | `false`                                  | Disables the Hellō button (best used in conjunction with `loading` prop)                                                    |
-| tooltip      | boolean         | `true`                                   | <img src="../screenshots/tooltip.png" alt="tooltip" style="width: 200px;"/>                                                 |
-| variant      | string [enum]() | `hello-btn`                              | Controls style of the Hellō button                                                                                          |
-| hoverVariant | string [enum]() | none                                     | Controls hover effect of the Hellō button                                                                                   |
-| lang         | string [enum]() | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                         |
-| customLabel  | string          | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default button Hellō Button text                                                                              |
+| Name         | Type            | Default                                  | Description/Output                                                                                                              |
+| ------------ | --------------- | ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| onClick      | function        | `() => {}` (no-op)                       | Called on click of Hellō button                                                                                                 |
+| loading      | boolean         | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/><br/>(best used in conjunction with `disabled` prop) |
+| disabled     | boolean         | `false`                                  | Disables the Hellō button (best used in conjunction with `loading` prop)                                                        |
+| tooltip      | boolean         | `true`                                   | <img src="../screenshots/tooltip.png" alt="tooltip" style="width: 200px;"/>                                                     |
+| variant      | string [enum]() | `hello-btn`                              | Controls style of the Hellō button                                                                                              |
+| hoverVariant | string [enum]() | none                                     | Controls hover effect of the Hellō button                                                                                       |
+| lang         | string [enum]() | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                             |
+| customLabel  | string          | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default button Hellō Button text                                                                                  |
 
 ### Styling
 
@@ -38,7 +38,7 @@ The values suffixed with `invert` and `static` are theme aware.
 | Value                        | Example Output (Light Mode)                                                                                       |
 | ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
 | Default                      | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                                       |
-| `hello-btn-black-on-light`   | <img src="../screenshots/hello-btn-black-on-light.png" alt="hello-btn-black-on-light" style="width: 200px;"/>     |
+| `hello-btn-black-on-light`   | <img src="../screenshots/default.png" alt="hello-btn-black-on-light" style="width: 200px;"/>                      |
 | `hello-btn-black-on-dark`    | <img src="../screenshots/hello-btn-black-on-dark.png" alt="hello-btn-black-on-dark" style="width: 200px;"/>       |
 | `hello-btn-white-on-light`   | <img src="../screenshots/hello-btn-white-on-light.png" alt="hello-btn-white-on-light" style="width: 200px;"/>     |
 | `hello-btn-white-on-dark`    | <img src="../screenshots/hello-btn-white-on-dark.png" alt="hello-btn-white-on-dark" style="width: 200px;"/>       |
