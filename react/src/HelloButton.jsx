@@ -23,24 +23,35 @@ const HelloButton = ({
     tooltip = true,
     variant = "",
     hoverVariant = "",
-    lang = "en",
+    lang = "",
     customLabel = "",
     style = {},
     className = {},
-    children
+    children,
+    disabled = false
 }) => {
     const [showTooltip, setShowTooltip] = useState(false)
-    const buttonText = lang ? localeKeys[lang].hello_btn : en["hello_btn"]
+    const [_lang, _setLang] = useState(lang)
+    const buttonText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_btn : en["hello_btn"]
+    const aboutButtonText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_about : en["hello_about"]
+    const aboutBubbleText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_about_bubble : en["hello_about_bubble"]
     useEffect(() => {
         document.addEventListener("click", (e) => {
-            //hande click outside
+            console.log(e)
+        })
+
+        if(!lang) {
+            _setLang(window.navigator.language)
+        }
+        window.addEventListener("languagechange", () => {
+            _setLang(window.navigator.language)
         })
     }, [])
     return (
         <div className="hello-container">
             <button
                 onClick={onClick}
-                disabled={loading} 
+                disabled={disabled} 
                 className={`hello-btn ${loading ? "hello-btn-loader" : ""} ${variant || ""} ${hoverVariant || ""} ${className || ""}`}
                 style={style}
             >
@@ -52,12 +63,12 @@ const HelloButton = ({
                         onClick={() => setShowTooltip(status => !status)}
                         className="hello-about"
                     >
-                        Hellō lets you control your identity
+                        {aboutButtonText}
                     </button>
                     {
                         showTooltip && (
                             <span className="hello-about-bubble" style={{visibility: "visible", top: "46px"}}>
-                                Hellō is a personal identity wallet that lets you choose what you share, how you authenticate, and how you recover your wallet. Hellō remembers who you are and protects your privacy.
+                                {aboutBubbleText}
                             </span>
                         )
                     }

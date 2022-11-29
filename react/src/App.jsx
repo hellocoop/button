@@ -13,7 +13,8 @@ function App() {
       hoverVariant="hello-btn-hover-flare"
       customLabel="ō&nbsp;&nbsp;&nbsp;Continue with Hellō Quickstart"
       tooltip={true}
-      lang="fr"
+      disabled={false}
+      lang="de"
     >
     </HelloButton>
   )
