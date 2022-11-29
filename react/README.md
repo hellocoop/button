@@ -17,7 +17,7 @@ function Foo() {
 | Name         | Type            | Default                                  | Description/Output                                                              |
 | ------------ | --------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
 | onClick      | function        | `() => {}` (no-op)                       | Called on click of Hellō button                                                 |
-| loading      | boolean         | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="max-width: 200px;"/> |
+| loading      | boolean         | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/> |
 | disabled     | boolean         | `false`                                  | Disables the Hellō button (best used in conjunction with `loading` prop)        |
 | tooltip      | boolean         | `true`                                   | ![tooltip](../screenshots/tooltip.png)                                          |
 | variant      | string [enum]() | `hello-btn`                              | Controls style of the Hellō button                                              |
