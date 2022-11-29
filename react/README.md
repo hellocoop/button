@@ -35,17 +35,17 @@ Play with the different button styles at [hello.dev](https://www.hello.dev/docum
 
 The values suffixed with `invert` and `static` are theme aware.
 
-| Value                        | Example Output (Light Mode)                                                                        |
-| ---------------------------- | -------------------------------------------------------------------------------------------------- |
-| Default                      | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                        |
-| `hello-btn-black-on-light`   | <img src="hello-btn-black-on-light.png" alt="hello-btn-black-on-light" style="width: 200px;"/>     |
-| `hello-btn-black-on-dark`    | <img src="hello-btn-black-on-dark.png" alt="hello-btn-black-on-dark" style="width: 200px;"/>       |
-| `hello-btn-white-on-light`   | <img src="hello-btn-white-on-light.png" alt="hello-btn-white-on-light" style="width: 200px;"/>     |
-| `hello-btn-white-on-dark`    | <img src="hello-btn-white-on-dark.png" alt="hello-btn-white-on-dark" style="width: 200px;"/>       |
-| `hello-btn-white-and-invert` | <img src="hello-btn-white-and-invert.png" alt="hello-btn-white-and-invert" style="width: 200px;"/> |
-| `hello-btn-black-and-invert` | <img src="hello-btn-black-and-invert.png" alt="hello-btn-black-and-invert" style="width: 200px;"/> |
-| `hello-btn-black-and-static` | <img src="hello-btn-black-and-static.png" alt="hello-btn-black-and-static" style="width: 200px;"/> |
-| `hello-btn-white-and-static` | <img src="hello-btn-white-and-static.png" alt="hello-btn-white-and-static" style="width: 200px;"/> |
+| Value                        | Example Output (Light Mode)                                                                                       |
+| ---------------------------- | ----------------------------------------------------------------------------------------------------------------- |
+| Default                      | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                                       |
+| `hello-btn-black-on-light`   | <img src="../screenshots/hello-btn-black-on-light.png" alt="hello-btn-black-on-light" style="width: 200px;"/>     |
+| `hello-btn-black-on-dark`    | <img src="../screenshots/hello-btn-black-on-dark.png" alt="hello-btn-black-on-dark" style="width: 200px;"/>       |
+| `hello-btn-white-on-light`   | <img src="../screenshots/hello-btn-white-on-light.png" alt="hello-btn-white-on-light" style="width: 200px;"/>     |
+| `hello-btn-white-on-dark`    | <img src="../screenshots/hello-btn-white-on-dark.png" alt="hello-btn-white-on-dark" style="width: 200px;"/>       |
+| `hello-btn-white-and-invert` | <img src="../screenshots/hello-btn-white-and-invert.png" alt="hello-btn-white-and-invert" style="width: 200px;"/> |
+| `hello-btn-black-and-invert` | <img src="../screenshots/hello-btn-black-and-invert.png" alt="hello-btn-black-and-invert" style="width: 200px;"/> |
+| `hello-btn-black-and-static` | <img src="../screenshots/hello-btn-black-and-static.png" alt="hello-btn-black-and-static" style="width: 200px;"/> |
+| `hello-btn-white-and-static` | <img src="../screenshots/hello-btn-white-and-static.png" alt="hello-btn-white-and-static" style="width: 200px;"/> |
 
 #### `hoverVariant`
 
@@ -54,7 +54,7 @@ The values suffixed with `invert` and `static` are theme aware.
 | Default                 | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                             |
 | `hello-btn-hover-glow`  | <img src="../screenshots/hello-btn-hover-glow.png" alt="hello-btn-hover-glow" style="width: 200px;"/>   |
 | `hello-btn-hover-flare` | <img src="../screenshots/hello-btn-hover-flare.png" alt="hello-btn-hover-flare" style="width: 200px;"/> |
-| `hello-btn-hover-none`  | <img src="../screenshots/hello-btn-hover-none.png" alt="hello-btn-hover-none" style="width: 200px;"/>   |
+| `hello-btn-hover-none`  | <img src="../screenshots/default.png" alt="hello-btn-hover-none" style="width: 200px;"/>                |
 
 #### Advanced Styling
 
@@ -68,7 +68,8 @@ Internally `<HelloButton/>` renders the markup
            Hello lets you control your identity
        </button>
        <span class="hello-about-bubble">
-           Hellō is a personal identity that lets...
+           Hellō is a personal identity wallet that lets you choose what you share, how you authenticate,
+           and how you recover your wallet. Hellō remembers who you are and protects your privacy.
        </span>
    </div>
 </div>
@@ -103,14 +104,14 @@ You can also add/overwrite targetting classes per the markup above.
 
 #### lang
 
-| Value        | Language | Output                                                                                             |
-| ------------ | -------- | -------------------------------------------------------------------------------------------------- |
-| en (Default) | English  | <img src="../screenshots/en.png" alt="Default" style="width: 400px;"/>                             |
-| hi           | Hindi    | <img src="../screenshots/hi.png" alt="hi" style="width: 400px;"/>![Default](../screenshots/hi.png) |
-| ar           | Arabic   | <img src="../screenshots/ar.png" alt="ar" style="width: 400px;"/>                                  |
-| de           | German   | <img src="../screenshots/de.png" alt="de" style="width: 400px;"/>                                  |
-| fr           | Frarch   | <img src="../screenshots/fr.png" alt="fr" style="width: 400px;"/>                                  |
-| es           | Spanish  | <img src="../screenshots/es.png" alt="es" style="width: 400px;"/>                                  |
+| Value        | Language | Output                                                                 |
+| ------------ | -------- | ---------------------------------------------------------------------- |
+| en (Default) | English  | <img src="../screenshots/en.png" alt="Default" style="width: 400px;"/> |
+| hi           | Hindi    | <img src="../screenshots/hi.png" alt="hi" style="width: 400px;"/>      |
+| ar           | Arabic   | <img src="../screenshots/ar.png" alt="ar" style="width: 400px;"/>      |
+| de           | German   | <img src="../screenshots/de.png" alt="de" style="width: 400px;"/>      |
+| fr           | Frarch   | <img src="../screenshots/fr.png" alt="fr" style="width: 400px;"/>      |
+| es           | Spanish  | <img src="../screenshots/es.png" alt="es" style="width: 400px;"/>      |
 
 Don't see your locale? We encourage you to create a translation for your locale per
 hellocoop/wallet-i18n and submit a pull request for review.
