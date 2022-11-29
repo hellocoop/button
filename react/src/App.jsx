@@ -9,8 +9,8 @@ function App() {
     <HelloButton
       onClick={() => setLoading(!loading)}
       loading={loading}
-      variant="hello-btn-white-on-dark"
-      hoverVariant="hello-btn-hover-flare"
+      color="hello-btn-white-on-dark"
+      hover="hello-btn-hover-flare"
       tooltip={true}
       disabled={false}
     >

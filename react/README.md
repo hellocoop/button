@@ -5,48 +5,35 @@
 ```javascript
 import { HelloButton } from "@hellocoop/react"
 
-function Foo() {
+function LoginPage() {
   // see https://www.hello.dev/documentation/Integrating-hello.html#_2-create-request-url to create a request url
   const login = () => (window.location.href = requestUrl)
   return <HelloButton onClick={login} />
 }
-
-/* All props
-    <HelloButton
-        onClick={login}
-        loading={false}
-        disabled={false}
-        tooltip={true}
-        variant="hello-btn-white-on-dark"
-        hoverVariant="hello-btn-hover-flare"
-        lang="ar"
-        customLabel="Hellō World"
-    />
-*/
 ```
 
 ## Props
 
-| Name         | Type                         | Default                                  | Description/Output                                                                                                                 |
-| ------------ | ---------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| onClick      | Function                     | `() => {}` (no-op)                       | Called on click of Hellō button                                                                                                    |
-| loading      | Boolean                      | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/><br/>(Best used in conjunction with `disabled` prop)    |
-| disabled     | Boolean                      | `false`                                  | Disables the Hellō button<br/>(Best used in conjunction with `loading` prop)                                                       |
-| tooltip      | Boolean                      | `true`                                   | <img src="../screenshots/tooltip.png" alt="tooltip" style="width: 200px;"/>                                                        |
-| variant      | String [Enum](#variant)      | `hello-btn`                              | Controls style of the Hellō button                                                                                                 |
-| hoverVariant | String [Enum](#hoverVariant) | none                                     | Controls hover effect of the Hellō button                                                                                          |
-| lang         | String [Enum](#lang)         | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                                |
-| customLabel  | String                       | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default Hellō Button text <br/><img src="../screenshots/custom-label.png" alt="custom label" style="width: 200px;"/> |
+| Name        | Type                  | Default                                  | Description/Output                                                                                                                 |
+| ----------- | --------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| onClick     | Function              | `() => {}` (no-op)                       | Called on click of Hellō button                                                                                                    |
+| loading     | Boolean               | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/><br/>(Best used in conjunction with `disabled` prop)    |
+| disabled    | Boolean               | `false`                                  | Disables the Hellō button<br/>(Best used in conjunction with `loading` prop)                                                       |
+| tooltip     | Boolean               | `true`                                   | <img src="../screenshots/tooltip.png" alt="tooltip" style="width: 200px;"/>                                                        |
+| color       | String [Enum](#color) | `hello-btn`                              | Controls style of the Hellō button                                                                                                 |
+| hover       | String [Enum](#hover) | none                                     | Controls hover effect of the Hellō button                                                                                          |
+| lang        | String [Enum](#lang)  | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                                |
+| customLabel | String                | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default Hellō Button text <br/><img src="../screenshots/custom-label.png" alt="custom label" style="width: 200px;"/> |
 
 ## Styling
 
-`variant` and `hoverVariant` props controls the styling of the Hellō Button.
+`color` and `hover` props controls the styling of the Hellō Button.
 
 Play with the different button styles at [hello.dev](https://www.hello.dev/documentation/getting-started.html#_2-standard-hello-buttons).
 
 <img src="../screenshots/demo.png" alt="button demo" style="width: 500px;" />
 
-### `variant`
+### `color`
 
 The values suffixed with `invert` and `static` are theme aware.
 
@@ -62,9 +49,9 @@ The values suffixed with `invert` and `static` are theme aware.
 | hello-btn-black-and-static | <img src="../screenshots/hello-btn-black-and-static.png" alt="hello-btn-black-and-static" style="width: 200px;"/> |
 | hello-btn-white-and-static | <img src="../screenshots/hello-btn-white-and-static.png" alt="hello-btn-white-and-static" style="width: 200px;"/> |
 
-### `hoverVariant`
+### `hover`
 
-| Value                 | Example Output (Default Variant + Light Mode)                                                           |
+| Value                 | Example Output (Default color + Light Mode)                                                             |
 | --------------------- | ------------------------------------------------------------------------------------------------------- |
 | Default               | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                             |
 | hello-btn-hover-glow  | <img src="../screenshots/hello-btn-hover-glow.png" alt="hello-btn-hover-glow" style="width: 200px;"/>   |

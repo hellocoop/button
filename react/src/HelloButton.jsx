@@ -21,8 +21,8 @@ const HelloButton = ({
     onClick = () => {},
     loading = false,
     tooltip = true,
-    variant = "",
-    hoverVariant = "",
+    color = "",
+    hover = "",
     lang = "",
     customLabel = "",
     style = {},
@@ -39,7 +39,7 @@ const HelloButton = ({
     useEffect(() => {
         const setLang = (code) => {
             for(const l of Object.keys(localeKeys)) {
-                if(window.navigator.language.startsWith(l)) {
+                if(code.startsWith(l)) {
                     _setLang(l)
                 }
             }
@@ -78,7 +78,7 @@ const HelloButton = ({
                 onClick={onClick}
                 dangerouslySetInnerHTML={{__html : customLabel || children || buttonText}}
                 disabled={disabled} 
-                className={`hello-btn ${loading ? "hello-btn-loader" : ""} ${variant || ""} ${hoverVariant || ""} ${className || ""}`}
+                className={`hello-btn ${loading ? "hello-btn-loader" : ""} ${color || ""} ${hover || ""} ${className || ""}`}
                 style={style}
             >
             </button>
