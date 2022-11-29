@@ -77,16 +77,15 @@ Internally `<HelloButton/>` renders the markup
 
 ```html
 <div class="hello-container">
-   <button class="hello-btn>ō&nbsp;&nbsp;&nbsp;Continue with Hellō</button>
-   <div class="hello-about-conatiner">
-       <button class="hello-about-btn">
-           Hello lets you control your identity
-       </button>
-       <span class="hello-about-bubble">
-           Hellō is a personal identity wallet that lets you choose what you share, how you authenticate,
-           and how you recover your wallet. Hellō remembers who you are and protects your privacy.
-       </span>
-   </div>
+  <button class="hello-btn">ō&nbsp;&nbsp;&nbsp;Continue with Hellō</button>
+  <div class="hello-about-conatiner">
+    <button class="hello-about">Hello lets you control your identity</button>
+    <span class="hello-about-bubble">
+      Hellō is a personal identity wallet that lets you choose what you share,
+      how you authenticate, and how you recover your wallet. Hellō remembers who
+      you are and protects your privacy.
+    </span>
+  </div>
 </div>
 ```
 
