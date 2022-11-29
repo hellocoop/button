@@ -32,18 +32,27 @@ const HelloButton = ({
 }) => {
     const [showTooltip, setShowTooltip] = useState(false)
     const [_lang, _setLang] = useState(lang)
-    const buttonText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_btn : en["hello_btn"]
-    const aboutButtonText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_about : en["hello_about"]
-    const aboutBubbleText = (lang && localeKeys[lang]) ? localeKeys[lang].hello_about_bubble : en["hello_about_bubble"]
+    const buttonText = (_lang && localeKeys[_lang]) ? localeKeys[_lang].hello_btn : en["hello_btn"]
+    const aboutButtonText = (_lang && localeKeys[_lang]) ? localeKeys[_lang].hello_about : en["hello_about"]
+    const aboutBubbleText = (_lang && localeKeys[_lang]) ? localeKeys[_lang].hello_about_bubble : en["hello_about_bubble"]
     
     useEffect(() => {
+        const setLang = (code) => {
+            for(const l of Object.keys(localeKeys)) {
+                if(window.navigator.language.startsWith(l)) {
+                    _setLang(l)
+                }
+            }
+        }
         if(!lang) {
-            _setLang(window.navigator.language)
+            setLang(window.navigator.language)
         }
         window.addEventListener("languagechange", () => {
-            _setLang(window.navigator.language)
+            setLang(window.navigator.language)
         })
     }, [])
+
+    console.log(_lang)
     
     const useOutsideClick = () => {
         const ref = useRef()

@@ -11,10 +11,8 @@ function App() {
       loading={loading}
       variant="hello-btn-white-on-dark"
       hoverVariant="hello-btn-hover-flare"
-      customLabel="ō&nbsp;&nbsp;&nbsp;Continue with Hellō Quickstart"
       tooltip={true}
       disabled={false}
-      lang="de"
     >
     </HelloButton>
   )
