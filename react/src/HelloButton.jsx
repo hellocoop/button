@@ -51,8 +51,6 @@ const HelloButton = ({
             setLang(window.navigator.language)
         })
     }, [])
-
-    console.log(_lang)
     
     const useOutsideClick = () => {
         const ref = useRef()
@@ -72,17 +70,17 @@ const HelloButton = ({
         }, [ref])
         return ref
     }
-
     const ref = useOutsideClick()
+
     return (
         <div className="hello-container">
             <button
                 onClick={onClick}
+                dangerouslySetInnerHTML={{__html : customLabel || children || buttonText}}
                 disabled={disabled} 
                 className={`hello-btn ${loading ? "hello-btn-loader" : ""} ${variant || ""} ${hoverVariant || ""} ${className || ""}`}
                 style={style}
             >
-                {customLabel || children || buttonText}
             </button>
             {tooltip && (
                 <div className="hello-about-container">
