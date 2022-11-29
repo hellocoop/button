@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import HelloButton from './HelloButton.jsx'
+import { HelloButton } from './HelloButton.jsx'
 import './App.css'
 
 function App() {
@@ -9,11 +9,13 @@ function App() {
     <HelloButton
       onClick={() => setLoading(!loading)}
       loading={loading}
+      variant="hello-btn-white-on-dark"
+      hoverVariant="hello-btn-hover-flare"
+      customLabel="ō&nbsp;&nbsp;&nbsp;Continue with Hellō Quickstart"
       tooltip={true}
-      style="hello-btn-white-on-dark"
-      hoverStyle="hello-btn-hover-flare"
-      language="fr"
-    />
+      lang="fr"
+    >
+    </HelloButton>
   )
 }
 
