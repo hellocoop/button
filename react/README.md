@@ -12,7 +12,8 @@ function ExampleLoginPage() {
     try {
       setLoading(true) // Show load spinner and disable button
       /* To create a request url,
-        see https://www.hello.dev/documentation/Integrating-hello.html#_2-create-request-url */
+         see https://www.hello.dev/documentation/Integrating-hello.html#_2-create-request-url
+      */
       const res = await fetch() // Fetch the request URL from your backend
       const { requestURL } = await res.json()
       window.location.href = requestURL
