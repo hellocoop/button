@@ -69,7 +69,7 @@ The values suffixed with `invert` and `static` are theme aware.
 | Default               | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                             |
 | hello-btn-hover-glow  | <img src="../screenshots/hello-btn-hover-glow.png" alt="hello-btn-hover-glow" style="width: 200px;"/>   |
 | hello-btn-hover-flare | <img src="../screenshots/hello-btn-hover-flare.png" alt="hello-btn-hover-flare" style="width: 200px;"/> |
-| `hello-btn-hover-none | <img src="../screenshots/default.png" alt="hello-btn-hover-none" style="width: 200px;"/>                |
+| hello-btn-hover-none  | <img src="../screenshots/default.png" alt="hello-btn-hover-none" style="width: 200px;"/>                |
 
 #### Advanced Styling
 
