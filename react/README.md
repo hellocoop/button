@@ -68,7 +68,7 @@ The values suffixed with `invert` and `static` are theme aware.
 
 ### Advanced Styling
 
-Internally `<HelloButton/>` renders this markup
+Internally `<HelloButton/>` renders the following markup
 
 ```html
 <div class="hello-container">
