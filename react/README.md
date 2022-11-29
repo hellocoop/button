@@ -27,16 +27,16 @@ function Foo() {
 
 ## Props
 
-| Name         | Type                         | Default                                  | Description/Output                                                                                                                        |
-| ------------ | ---------------------------- | ---------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
-| onClick      | function                     | `() => {}` (no-op)                       | Called on click of Hellō button                                                                                                           |
-| loading      | boolean                      | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/><br/>(best used in conjunction with `disabled` prop)           |
-| disabled     | boolean                      | `false`                                  | Disables the Hellō button (best used in conjunction with `loading` prop)                                                                  |
-| tooltip      | boolean                      | `true`                                   | <img src="../screenshots/tooltip.png" alt="tooltip" style="width: 200px;"/>                                                               |
-| variant      | string [enum](#variant)      | `hello-btn`                              | Controls style of the Hellō button                                                                                                        |
-| hoverVariant | string [enum](#hoverVariant) | none                                     | Controls hover effect of the Hellō button                                                                                                 |
-| lang         | string [enum](#lang)         | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                                       |
-| customLabel  | string                       | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default button Hellō Button text <br/><img src="../screenshots/custom-label.png" alt="custom label" style="width: 200px;"/> |
+| Name         | Type                         | Default                                  | Description/Output                                                                                                                 |
+| ------------ | ---------------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
+| onClick      | function                     | `() => {}` (no-op)                       | Called on click of Hellō button                                                                                                    |
+| loading      | boolean                      | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/><br/>(best used in conjunction with `disabled` prop)    |
+| disabled     | boolean                      | `false`                                  | Disables the Hellō button (best used in conjunction with `loading` prop)                                                           |
+| tooltip      | boolean                      | `true`                                   | <img src="../screenshots/tooltip.png" alt="tooltip" style="width: 200px;"/>                                                        |
+| variant      | string [enum](#variant)      | `hello-btn`                              | Controls style of the Hellō button                                                                                                 |
+| hoverVariant | string [enum](#hoverVariant) | none                                     | Controls hover effect of the Hellō button                                                                                          |
+| lang         | string [enum](#lang)         | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                                |
+| customLabel  | string                       | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default Hellō Button text <br/><img src="../screenshots/custom-label.png" alt="custom label" style="width: 200px;"/> |
 
 ### Styling
 
