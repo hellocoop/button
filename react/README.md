@@ -1,66 +1,72 @@
-# <HellōButton/> for React
+# `<HelloButton/>` for React
 
 ## Usage
 
 ```javascript
+import React, { useState } from "react"
 import { HelloButton } from "@hellocoop/react"
 
-function LoginPage() {
-  // see https://www.hello.dev/documentation/Integrating-hello.html#_2-create-request-url to create a request url
-  const login = () => (window.location.href = requestUrl)
-  return <HelloButton onClick={login} />
+function ExampleLoginPage() {
+  const [loading, setLoading] = useState(false)
+  const login = async () => {
+    try {
+      setLoading(true) // Show load spinner and disable button
+      /* To create a request url,
+        see https://www.hello.dev/documentation/Integrating-hello.html#_2-create-request-url */
+      const res = await fetch() // Fetch the request URL from your backend
+      const { requestURL } = await res.json()
+      window.location.href = requestURL
+    } catch (err) {
+      setLoading(false)
+      console.error(err)
+    }
+  }
+
+  return <HelloButton onClick={login} loading={loading} disabled={loading} />
 }
 ```
 
 ## Props
 
-| Name        | Type                  | Default                                  | Description/Output                                                                                                                 |
-| ----------- | --------------------- | ---------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
-| onClick     | Function              | `() => {}` (no-op)                       | Called on click of Hellō button                                                                                                    |
-| loading     | Boolean               | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/><br/>(Best used in conjunction with `disabled` prop)    |
-| disabled    | Boolean               | `false`                                  | Disables the Hellō button<br/>(Best used in conjunction with `loading` prop)                                                       |
-| tooltip     | Boolean               | `true`                                   | <img src="../screenshots/tooltip.png" alt="tooltip" style="width: 200px;"/>                                                        |
-| color       | String [Enum](#color) | `hello-btn`                              | Controls style of the Hellō button                                                                                                 |
-| hover       | String [Enum](#hover) | none                                     | Controls hover effect of the Hellō button                                                                                          |
-| lang        | String [Enum](#lang)  | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                                |
-| customLabel | String                | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default Hellō Button text <br/><img src="../screenshots/custom-label.png" alt="custom label" style="width: 200px;"/> |
+| Name     | Type                   | Description                                                                                           |
+| -------- | ---------------------- | ----------------------------------------------------------------------------------------------------- |
+| onClick  | Function               | **Required**<br/><br/>Called on click of Hellō button                                                 |
+| loading  | Boolean                | Defaults to `false`<br/><br/>Show load spinner<br/>(Best used in conjunction with `disabled` prop)    |
+| disabled | Boolean                | Defaults to `false`<br/><br/>Disable Hellō button<br/>(Best used in conjunction with `loading` prop)  |
+| tooltip  | Boolean                | Defaults to `true`<br/><br/>Show the about tooltip button                                             |
+| color    | String: [Enum](#color) | Controls style of Hellō button                                                                        |
+| hover    | String: [Enum](#hover) | Controls hover effect of Hellō button                                                                 |
+| lang     | String: [Enum](#lang)  | Defaults to "en"<br/><br/>Language of Hellō button, about tooltip button and text                     |
+| label    | String                 | Defaults to "ō&nbsp;&nbsp;&nbsp;Continue with Hellō"<br/><br/>Overwrite the default Hellō button text |
 
 ## Styling
 
-`color` and `hover` props controls the styling of the Hellō Button.
+`color` and `hover` props control styling of the Hellō Button.
 
-Play with the different button styles at [hello.dev](https://www.hello.dev/documentation/getting-started.html#_2-standard-hello-buttons).
-
-<img src="../screenshots/demo.png" alt="button demo" style="width: 500px;" />
+Demo different button styles at [hello.dev](https://www.hello.dev/documentation/getting-started.html#_2-standard-hello-buttons)
 
 ### `color`
 
 The values suffixed with `invert` and `static` are theme aware.
 
-| Value                      | Example Output (Light Mode)                                                                                       |
-| -------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| Default                    | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                                       |
-| hello-btn-black-on-light   | <img src="../screenshots/default.png" alt="hello-btn-black-on-light" style="width: 200px;"/>                      |
-| hello-btn-black-on-dark    | <img src="../screenshots/hello-btn-black-on-dark.png" alt="hello-btn-black-on-dark" style="width: 200px;"/>       |
-| hello-btn-white-on-light   | <img src="../screenshots/hello-btn-white-on-light.png" alt="hello-btn-white-on-light" style="width: 200px;"/>     |
-| hello-btn-white-on-dark    | <img src="../screenshots/hello-btn-white-on-dark.png" alt="hello-btn-white-on-dark" style="width: 200px;"/>       |
-| hello-btn-white-and-invert | <img src="../screenshots/hello-btn-white-and-invert.png" alt="hello-btn-white-and-invert" style="width: 200px;"/> |
-| hello-btn-black-and-invert | <img src="../screenshots/hello-btn-black-and-invert.png" alt="hello-btn-black-and-invert" style="width: 200px;"/> |
-| hello-btn-black-and-static | <img src="../screenshots/hello-btn-black-and-static.png" alt="hello-btn-black-and-static" style="width: 200px;"/> |
-| hello-btn-white-and-static | <img src="../screenshots/hello-btn-white-and-static.png" alt="hello-btn-white-and-static" style="width: 200px;"/> |
+- hello-btn-black-on-light
+- hello-btn-black-on-dark
+- hello-btn-white-on-light
+- hello-btn-white-on-dark
+- hello-btn-white-and-invert
+- hello-btn-black-and-invert
+- hello-btn-black-and-static
+- hello-btn-white-and-static
 
 ### `hover`
 
-| Value                 | Example Output (Default color + Light Mode)                                                             |
-| --------------------- | ------------------------------------------------------------------------------------------------------- |
-| Default               | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                             |
-| hello-btn-hover-glow  | <img src="../screenshots/hello-btn-hover-glow.png" alt="hello-btn-hover-glow" style="width: 200px;"/>   |
-| hello-btn-hover-flare | <img src="../screenshots/hello-btn-hover-flare.png" alt="hello-btn-hover-flare" style="width: 200px;"/> |
-| hello-btn-hover-none  | <img src="../screenshots/default.png" alt="hello-btn-hover-none" style="width: 200px;"/>                |
+- hello-btn-hover-glow
+- hello-btn-hover-glare
+- hello-btn-hover-none
 
 ### Advanced Styling
 
-Internally `<HelloButton/>` renders the markup
+Internally `<HelloButton/>` renders this markup
 
 ```html
 <div class="hello-container">
@@ -105,14 +111,14 @@ You can also add/overwrite targetting classes per the markup above.
 
 ### lang
 
-| Value            | Language | Output                                                                 |
-| ---------------- | -------- | ---------------------------------------------------------------------- |
-| en<br/>(Default) | English  | <img src="../screenshots/en.png" alt="Default" style="width: 400px;"/> |
-| hi               | Hindi    | <img src="../screenshots/hi.png" alt="hi" style="width: 400px;"/>      |
-| ar               | Arabic   | <img src="../screenshots/ar.png" alt="ar" style="width: 400px;"/>      |
-| de               | German   | <img src="../screenshots/de.png" alt="de" style="width: 400px;"/>      |
-| fr               | Frarch   | <img src="../screenshots/fr.png" alt="fr" style="width: 400px;"/>      |
-| es               | Spanish  | <img src="../screenshots/es.png" alt="es" style="width: 400px;"/>      |
+| Value        | Language |
+| ------------ | -------- |
+| en (Default) | English  |
+| hi           | Hindi    |
+| ar           | Arabic   |
+| de           | German   |
+| fr           | Frarch   |
+| es           | Spanish  |
 
 Don't see your locale? We encourage you to create a translation for your locale per
 [hellocoop/wallet-i18n](https://github.com/hellocoop/wallet-i18n) and submit a pull request for review.

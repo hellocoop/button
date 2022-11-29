@@ -24,12 +24,12 @@ const HelloButton = ({
     color = "",
     hover = "",
     lang = "",
-    customLabel = "",
+    label = "",
     style = {},
     className = {},
     children,
     disabled = false
-}) => {
+} = {}) => {
     const [showTooltip, setShowTooltip] = useState(false)
     const [_lang, _setLang] = useState(lang)
     const buttonText = (_lang && localeKeys[_lang]) ? localeKeys[_lang].hello_btn : en["hello_btn"]
@@ -76,7 +76,7 @@ const HelloButton = ({
         <div className="hello-container">
             <button
                 onClick={onClick}
-                dangerouslySetInnerHTML={{__html : customLabel || children || buttonText}}
+                dangerouslySetInnerHTML={{__html : label || children || buttonText}}
                 disabled={disabled} 
                 className={`hello-btn ${loading ? "hello-btn-loader" : ""} ${color || ""} ${hover || ""} ${className || ""}`}
                 style={style}
