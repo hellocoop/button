@@ -91,21 +91,21 @@ You can also add/overwrite targetting classes per the markup above.
 ```css
 .hello-container {
   /*
-       top level container holding the Hellō button,
-       about button and bubble
-    */
+    Top level container holding the Hellō button,
+    about button and bubble
+  */
 }
 .hello-btn {
-  // Hellō button
+  /* Hellō button */
 }
 .hello-about-container {
-  // container for hello about button and bubble
+  /* Container for hello about button and bubble */
 }
 .hello-about {
-  // Hellō about button
+  /* Hellō about button */
 }
 .hello-about-bubble {
-  // Hellō about bubble
+  /* Hellō about bubble */
 }
 ```
 
@@ -122,5 +122,6 @@ You can also add/overwrite targetting classes per the markup above.
 | fr           | Frarch   |
 | es           | Spanish  |
 
-Don't see your locale? We encourage you to create a translation for your locale per
+Don't see your locale?
+We encourage you to create a translation for your locale per
 [hellocoop/wallet-i18n](https://github.com/hellocoop/wallet-i18n) and submit a pull request for review.
