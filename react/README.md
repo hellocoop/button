@@ -31,6 +31,8 @@ function Foo() {
 
 Play with the different button styles at [hello.dev](https://www.hello.dev/documentation/getting-started.html#_2-standard-hello-buttons).
 
+![button demo](../screenshots/demo.png)
+
 #### `variant`
 
 The values suffixed with `invert` and `static` are theme aware.
