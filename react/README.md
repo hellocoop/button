@@ -88,24 +88,24 @@ If you want to apply additional styles, the `HelloButton` component accepts a `s
 
 You can also add/overwrite targetting classes per the markup above.
 
-```
+```css
 .hello-container {
-    /*
+  /*
        top level container holding the Hellō button,
        about button and bubble
     */
 }
 .hello-btn {
-    // Hellō button
+  // Hellō button
 }
 .hello-about-container {
-    // container for hello about button and bubble
+  // container for hello about button and bubble
 }
 .hello-about {
-    // Hellō about button
+  // Hellō about button
 }
 .hello-about-bubble {
-    // Hellō about bubble
+  // Hellō about bubble
 }
 ```
 
