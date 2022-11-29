@@ -106,7 +106,7 @@ You can also add/overwrite targetting classes per the markup above.
 .hello-about-container {
     // container for hello about button and bubble
 }
-.hello-about-btn {
+.hello-about {
     // Hellō about button
 }
 .hello-about-bubble {
