@@ -14,16 +14,16 @@ function Foo() {
 
 ## Props
 
-| Name         | Type            | Default                                  | Description/Output                                                              |
-| ------------ | --------------- | ---------------------------------------- | ------------------------------------------------------------------------------- |
-| onClick      | function        | `() => {}` (no-op)                       | Called on click of Hellō button                                                 |
-| loading      | boolean         | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/> |
-| disabled     | boolean         | `false`                                  | Disables the Hellō button (best used in conjunction with `loading` prop)        |
-| tooltip      | boolean         | `true`                                   | ![tooltip](../screenshots/tooltip.png)                                          |
-| variant      | string [enum]() | `hello-btn`                              | Controls style of the Hellō button                                              |
-| hoverVariant | string [enum]() | none                                     | Controls hover effect of the Hellō button                                       |
-| lang         | string [enum]() | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                             |
-| customLabel  | string          | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default button Hellō Button text                                  |
+| Name         | Type            | Default                                  | Description/Output                                                                                                          |
+| ------------ | --------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| onClick      | function        | `() => {}` (no-op)                       | Called on click of Hellō button                                                                                             |
+| loading      | boolean         | `false`                                  | <img src="../screenshots/loading.png" alt="loading" style="width: 200px;"/> (best used in conjunction with `disabled` prop) |
+| disabled     | boolean         | `false`                                  | Disables the Hellō button (best used in conjunction with `loading` prop)                                                    |
+| tooltip      | boolean         | `true`                                   | <img src="../screenshots/tooltip.png" alt="tooltip" style="width: 200px;"/>                                                 |
+| variant      | string [enum]() | `hello-btn`                              | Controls style of the Hellō button                                                                                          |
+| hoverVariant | string [enum]() | none                                     | Controls hover effect of the Hellō button                                                                                   |
+| lang         | string [enum]() | `window.navigation.language \|\| "en"`   | Language of the Hellō button, about button and text                                                                         |
+| customLabel  | string          | "ō&nbsp;&nbsp;&nbsp;Continue with Hellō" | Overwrite the default button Hellō Button text                                                                              |
 
 ### Styling
 
@@ -35,26 +35,26 @@ Play with the different button styles at [hello.dev](https://www.hello.dev/docum
 
 The values suffixed with `invert` and `static` are theme aware.
 
-| Value                        | Example Output (Light Mode)                                              |
-| ---------------------------- | ------------------------------------------------------------------------ |
-| Default                      | ![Default](../screenshots/default.png)                                   |
-| `hello-btn-black-on-light`   | ![hello-btn-black-on-light](../screenshots/default.png)                  |
-| `hello-btn-black-on-dark`    | ![hello-btn-black-on-dark](../screenshots/hello-btn-black-on-dark.png)   |
-| `hello-btn-white-on-light`   | ![hello-btn-white-on-light](../screenshots/hello-btn-white-on-light.png) |
-| `hello-btn-white-on-dark`    | ![hello-btn-white-on-dark](../screenshots/hello-btn-white-on-dark.png)   |
-| `hello-btn-white-and-invert` | ![hello-btn-white-and-invert](../screenshots/hello-btn-white-and-invert) |
-| `hello-btn-black-and-invert` | ![hello-btn-black-and-invert](../screenshots/hello-btn-black-and-invert) |
-| `hello-btn-black-and-static` | ![hello-btn-black-and-static](../screenshots/hello-btn-black-and-static) |
-| `hello-btn-white-and-static` | ![hello-btn-white-and-static](../screenshots/hello-btn-white-and-static) |
+| Value                        | Example Output (Light Mode)                                                                        |
+| ---------------------------- | -------------------------------------------------------------------------------------------------- |
+| Default                      | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                        |
+| `hello-btn-black-on-light`   | <img src="hello-btn-black-on-light.png" alt="hello-btn-black-on-light" style="width: 200px;"/>     |
+| `hello-btn-black-on-dark`    | <img src="hello-btn-black-on-dark.png" alt="hello-btn-black-on-dark" style="width: 200px;"/>       |
+| `hello-btn-white-on-light`   | <img src="hello-btn-white-on-light.png" alt="hello-btn-white-on-light" style="width: 200px;"/>     |
+| `hello-btn-white-on-dark`    | <img src="hello-btn-white-on-dark.png" alt="hello-btn-white-on-dark" style="width: 200px;"/>       |
+| `hello-btn-white-and-invert` | <img src="hello-btn-white-and-invert.png" alt="hello-btn-white-and-invert" style="width: 200px;"/> |
+| `hello-btn-black-and-invert` | <img src="hello-btn-black-and-invert.png" alt="hello-btn-black-and-invert" style="width: 200px;"/> |
+| `hello-btn-black-and-static` | <img src="hello-btn-black-and-static.png" alt="hello-btn-black-and-static" style="width: 200px;"/> |
+| `hello-btn-white-and-static` | <img src="hello-btn-white-and-static.png" alt="hello-btn-white-and-static" style="width: 200px;"/> |
 
 #### `hoverVariant`
 
-| Value                   | Example Output (Default Variant + Light Mode)                      |
-| ----------------------- | ------------------------------------------------------------------ |
-| Default                 | ![Default](../screenshots/default.png)                             |
-| `hello-btn-hover-glow`  | ![hello-btn-hover-glow](../screenshots/hello-btn-hover-glow.png)   |
-| `hello-btn-hover-flare` | ![hello-btn-hover-flare](../screenshots/hello-btn-hover-flare.png) |
-| `hello-btn-hover-none`  | ![hello-btn-hover-none](../screenshots/default.png)                |
+| Value                   | Example Output (Default Variant + Light Mode)                                                           |
+| ----------------------- | ------------------------------------------------------------------------------------------------------- |
+| Default                 | <img src="../screenshots/default.png" alt="Default" style="width: 200px;"/>                             |
+| `hello-btn-hover-glow`  | <img src="../screenshots/hello-btn-hover-glow.png" alt="hello-btn-hover-glow" style="width: 200px;"/>   |
+| `hello-btn-hover-flare` | <img src="../screenshots/hello-btn-hover-flare.png" alt="hello-btn-hover-flare" style="width: 200px;"/> |
+| `hello-btn-hover-none`  | <img src="../screenshots/hello-btn-hover-none.png" alt="hello-btn-hover-none" style="width: 200px;"/>   |
 
 #### Advanced Styling
 
@@ -103,14 +103,14 @@ You can also add/overwrite targetting classes per the markup above.
 
 #### lang
 
-| Value        | Language | Output                            |
-| ------------ | -------- | --------------------------------- |
-| en (Default) | English  | ![Default](../screenshots/en.png) |
-| hi           | Hindi    | ![Default](../screenshots/hi.png) |
-| ar           | Arabic   | ![Default](../screenshots/ar.png) |
-| de           | German   | ![Default](../screenshots/de.png) |
-| fr           | French   | ![Default](../screenshots/fr.png) |
-| es           | Spanish  | ![Default](../screenshots/es.png) |
+| Value        | Language | Output                                                                                             |
+| ------------ | -------- | -------------------------------------------------------------------------------------------------- |
+| en (Default) | English  | <img src="../screenshots/en.png" alt="Default" style="width: 400px;"/>                             |
+| hi           | Hindi    | <img src="../screenshots/hi.png" alt="hi" style="width: 400px;"/>![Default](../screenshots/hi.png) |
+| ar           | Arabic   | <img src="../screenshots/ar.png" alt="ar" style="width: 400px;"/>                                  |
+| de           | German   | <img src="../screenshots/de.png" alt="de" style="width: 400px;"/>                                  |
+| fr           | Frarch   | <img src="../screenshots/fr.png" alt="fr" style="width: 400px;"/>                                  |
+| es           | Spanish  | <img src="../screenshots/es.png" alt="es" style="width: 400px;"/>                                  |
 
 Don't see your locale? We encourage you to create a translation for your locale per
 hellocoop/wallet-i18n and submit a pull request for review.
