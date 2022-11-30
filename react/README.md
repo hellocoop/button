@@ -1,5 +1,10 @@
 # `<HelloButton/>` for React
 
+## Installation
+```sh
+npm install @hellocoop/react
+```
+
 ## Usage
 
 ```javascript
