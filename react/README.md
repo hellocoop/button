@@ -6,7 +6,7 @@
 import React, { useState } from "react"
 import { HelloButton } from "@hellocoop/react"
 
-function ExampleLoginPage() {
+export default function ExampleLoginPage() {
   const [loading, setLoading] = useState(false)
   const login = async () => {
     try {
