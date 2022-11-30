@@ -103,6 +103,4 @@ const HelloButton = ({
     )
 }
 
-export {
-    HelloButton
-}
+export default HelloButton
