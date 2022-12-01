@@ -36,16 +36,16 @@ export default function ExampleLoginPage() {
 
 ## Props
 
-| Name     | Type                   | Description                                                                                           |
-| -------- | ---------------------- | ----------------------------------------------------------------------------------------------------- |
-| onClick  | Function               | **Required**<br/><br/>Called on click of Hellō button                                                 |
-| loading  | Boolean                | Defaults to `false`<br/><br/>Show load spinner<br/>(Best used in conjunction with `disabled` prop)    |
-| disabled | Boolean                | Defaults to `false`<br/><br/>Disable Hellō button<br/>(Best used in conjunction with `loading` prop)  |
-| tooltip  | Boolean                | Defaults to `true`<br/><br/>Show the about tooltip button                                             |
-| color    | String: [Enum](#color) | Controls style of Hellō button                                                                        |
-| hover    | String: [Enum](#hover) | Controls hover effect of Hellō button                                                                 |
-| lang     | String: [Enum](#lang)  | Defaults to "en"<br/><br/>Language of Hellō button, about tooltip button and text                     |
-| label    | String                 | Defaults to "ō&nbsp;&nbsp;&nbsp;Continue with Hellō"<br/><br/>Overwrite the default Hellō button text |
+| Name     | Type                                                                                 | Description                                                                                           |
+| -------- | ------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------- |
+| onClick  | Function                                                                             | **Required**<br/><br/>Called on click of Hellō button                                                 |
+| loading  | Boolean                                                                              | Defaults to `false`<br/><br/>Show load spinner<br/>(Best used in conjunction with `disabled` prop)    |
+| disabled | Boolean                                                                              | Defaults to `false`<br/><br/>Disable Hellō button<br/>(Best used in conjunction with `loading` prop)  |
+| tooltip  | Boolean                                                                              | Defaults to `true`<br/><br/>Show the about tooltip button                                             |
+| color    | String: [Enum](#color)                                                               | Controls style of Hellō button                                                                        |
+| hover    | String: [Enum](#hover)                                                               | Controls hover effect of Hellō button                                                                 |
+| lang     | String: [Enum](https://github.com/hellocoop/wallet-i18n#currently-supported-locales) | Defaults to "en"<br/><br/>Language of Hellō button, about tooltip button and text                     |
+| label    | String                                                                               | Defaults to "ō&nbsp;&nbsp;&nbsp;Continue with Hellō"<br/><br/>Overwrite the default Hellō button text |
 
 ## Styling
 
@@ -114,23 +114,6 @@ You can also add/overwrite targetting classes per the markup above.
   /* Hellō about bubble */
 }
 ```
-
-## Locales
-
-### lang
-
-| Value        | Language |
-| ------------ | -------- |
-| en (Default) | English  |
-| hi           | Hindi    |
-| ar           | Arabic   |
-| de           | German   |
-| fr           | Frarch   |
-| es           | Spanish  |
-
-Don't see your locale?<br/>
-We encourage you to create a translation for your locale per
-[hellocoop/wallet-i18n](https://github.com/hellocoop/wallet-i18n) and submit a pull request for review.
 
 ## License
 
