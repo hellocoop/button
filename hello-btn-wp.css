@@ -40,7 +40,7 @@ button.hello-about {
 	text-decoration: underline;
 	margin-top: 12px;
     color: inherit;
-	line-height: normal;
+	line-height: 1;
 	padding: revert;
 }
 
@@ -99,7 +99,7 @@ button.hello-btn-white-and-static {
 	border: none;
 	outline: none;
 	user-select: none;
-	line-height: normal;
+	line-height: 1;
 	/* BUTTON TEXT CENETERED ON BOTH AXIS IF WIDTH OVERRIDDEN */
 	display: inline-flex;
 	align-items: center;
